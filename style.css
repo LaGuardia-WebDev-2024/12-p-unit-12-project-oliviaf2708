@@ -16,6 +16,15 @@
   margin-bottom: 20px;
 }
 
+#cuisine-result {
+  background: rgb(159, 236, 255);
+  border: 5px solid black;
+  font-size: 24px;
+  min-height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 hr {
   height: 5px;
   background-color: black;

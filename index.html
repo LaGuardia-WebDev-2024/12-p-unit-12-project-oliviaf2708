@@ -1,6 +1,6 @@
 <!-- Unit 12 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
+[ YES ] Two Interactive Drop-down Inputs 
 [  ] Standard Animation
 [  ] Custom Animation
 [  ] Include Three Images
@@ -10,7 +10,7 @@ Select ONE Additional Feature to Add
 [ no ] Feature 2 - Chain jQuery Methods
 [ no ] Feature 3 - .mouseover() & .mouseOut() Methods
 [ no ] Feature 4 - :hover Feature 
-[ no ] Feature 5 - Add an Additional Interactive Drop-down
+[ YES ] Feature 5 - Add an Additional Interactive Drop-down
 -->
 
 <!DOCTYPE html>
@@ -21,17 +21,17 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>What Are All My Favorites??</h1>
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
         🎥 What is my favorite movie?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1">How to Loose a Guy in 10 Days</option>
+          <option value="movie2">Terminator 2: Judgment Day</option>
+          <option value="movie3">La La Land</option>
+          <option value="movie4">The Devil Wears Prada</option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
@@ -43,12 +43,12 @@ Select ONE Additional Feature to Add
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        📖 What is my favorite book?
+        ✈️ What is my favorite place to travel?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="place1">Hawaii</option>
+          <option value="place2">Paris</option>
+          <option value="place3">London</option>
+          <option value="place4">Italy</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
@@ -56,9 +56,24 @@ Select ONE Additional Feature to Add
     <div id="book-result">
       <p id="book-text"></p>
     </div>
+    <form id="cuisine-form">
+      <label>
+        🥘 What is my favorite cuisine to eat?
+        <select id="cuisine-answer">
+          <option value="cuisine1">Italian</option>
+          <option value="cuisine2">Mediterranean</option>
+          <option value="cuisine3">Japanese</option>
+          <option value="cuisine4">Filipino</option>
+        </select>
+      </label>
+      <button type="submit">Check Book Answer</button>
+    </form>
+    <div id="cuisine-result">
+      <p id="cuisine-text"></p>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-      
+    
       //========================Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
@@ -66,11 +81,11 @@ Select ONE Additional Feature to Add
         var $answer = $("#movie-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-text").text("YESSSS!");
+        if (answer === "movie3") {
+          $("#movie-text").text("YESSSS YOU GOT IT!");
         } 
         else {
-          $("#movie-text").text("Try Again!");
+          $("#movie-text").text("Womp Womp Try Again!");
         }
       });
 
@@ -81,7 +96,21 @@ Select ONE Additional Feature to Add
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
+        if (answer === "place2") {
+          $("#book-text").text("YESSSS!");
+        } 
+        else {
+          $("#book-text").text("Try Again!");
+        }
+      });
+
+      $("#cuisine-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#cuisine-answer");
+        var answer = $answer.val();
+
+        if (answer === "cuisine4") {
           $("#book-text").text("YESSSS!");
         } 
         else {
