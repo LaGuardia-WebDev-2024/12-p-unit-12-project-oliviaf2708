@@ -25,6 +25,11 @@
   margin-bottom: 20px;
 }
 
+img{
+  width: 200;
+}
+  
+
 hr {
   height: 5px;
   background-color: black;

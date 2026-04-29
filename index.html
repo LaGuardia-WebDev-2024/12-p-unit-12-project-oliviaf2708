@@ -38,6 +38,8 @@ Select ONE Additional Feature to Add
     </form>
     <div id="movie-result">
       <p id="movie-text"></p>
+      <img class="movie-pic" width="200">
+      <img class="womp-pic" width="200">
     </div>
     <hr />
     <!-- Book Question -->
@@ -55,6 +57,8 @@ Select ONE Additional Feature to Add
     </form>
     <div id="book-result">
       <p id="book-text"></p>
+      <img class="place-pic" width="200">
+      <img class="nope-pic" width="200">
     </div>
     <form id="cuisine-form">
       <label>
@@ -70,6 +74,8 @@ Select ONE Additional Feature to Add
     </form>
     <div id="cuisine-result">
       <p id="cuisine-text"></p>
+      <img class="cuisine-pic" width="200">
+      <img class="nah-pic" width="200">
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
@@ -83,9 +89,13 @@ Select ONE Additional Feature to Add
 
         if (answer === "movie3") {
           $("#movie-text").text("YESSSS YOU GOT IT!");
+          $(".movie-pic").attr("src","https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_FMjpg_UX1000_.jpg").show(2000);
+          $(".womp-pic").hide()
         } 
         else {
           $("#movie-text").text("Womp Womp Try Again!");
+          $(".womp-pic").attr("src","https://t3.ftcdn.net/jpg/09/81/24/92/360_F_981249230_FQZ6eJ3gJoK8dVlLfXU87aAtgRdAK789.jpg").show(2000)
+          $(".movie-pic").hide()
         }
       });
 
@@ -98,12 +108,17 @@ Select ONE Additional Feature to Add
 
         if (answer === "place2") {
           $("#book-text").text("YESSSS!");
+          $(".place-pic").attr("src","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/15/6d/d6/paris.jpg?w=1400&h=-1&s=1").show(2000);
+          $(".nope-pic").hide()
         } 
         else {
           $("#book-text").text("Try Again!");
+          $(".nope-pic").attr("src","https://t3.ftcdn.net/jpg/09/81/24/92/360_F_981249230_FQZ6eJ3gJoK8dVlLfXU87aAtgRdAK789.jpg").show(2000);
+          $(".place-pic").hide()
         }
       });
 
+      //=======================Food Question jQuery Code
       $("#cuisine-form").on("submit", function (event) {
         event.preventDefault();
 
@@ -111,10 +126,14 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
 
         if (answer === "cuisine4") {
-          $("#book-text").text("YESSSS!");
+          $("#cuisine-text").text("YESSSS!");
+          $(".cuisine-pic").attr("src","https://food.fnr.sndimg.com/content/dam/images/food/fullset/2024/07/29/CHICKEN_ADOBO_H_f.jpg.rend.hgtvcom.1280.960.85.suffix/1722282685644.webp").show(2000);
+          $(".nah-pic").hide()
         } 
         else {
-          $("#book-text").text("Try Again!");
+          $("#cuisine-text").text("Try Again!");
+          $(".nah-pic").attr("src","https://t3.ftcdn.net/jpg/09/81/24/92/360_F_981249230_FQZ6eJ3gJoK8dVlLfXU87aAtgRdAK789.jpg").show(2000);
+          $(".cuisine-pic").hide()
         }
       });
       
