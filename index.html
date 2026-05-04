@@ -1,8 +1,8 @@
 <!-- Unit 12 Project
 Requirements
 [ YES ] Two Interactive Drop-down Inputs 
-[  ] Standard Animation
-[  ] Custom Animation
+[ YES ] Standard Animation
+[ YES ] Custom Animation
 [ YES ] Include Three Images
 
 Select ONE Additional Feature to Add  
@@ -77,6 +77,19 @@ Select ONE Additional Feature to Add
       <img class="cuisine-pic" width="200">
       <img class="nah-pic" width="200">
     </div>
+
+    <button id="suprisebutton">Suprise</button>
+        <div id="suprise-result">
+        <br>
+        <img class="fun-pic" width="200">
+      </div>
+      <label>
+        Keep Clicking!!!
+        </label>
+    <button id="extrasuprisebutton">Extra Suprise</button>
+        <div id="suprise2-result">
+      </div>
+     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
     
@@ -136,6 +149,20 @@ Select ONE Additional Feature to Add
           $(".cuisine-pic").hide()
         }
       });
+
+      $("#suprisebutton").click(function () {
+        $(".fun-pic").attr("src","https://play-lh.googleusercontent.com/SZpyRU_FB9qpQsO8uXRrQcC1RZ-HFvqzmB2aaJ-QdK-PA_Rg-bx90onXgHUcwZpg18k=w240-h480-rw").show(2000)
+        .animate({
+          width: "300px",
+        },1500)
+      })
+
+      $("#extrasuprisebutton").click(function () {
+        $(".fun-pic").attr("src","https://play-lh.googleusercontent.com/SZpyRU_FB9qpQsO8uXRrQcC1RZ-HFvqzmB2aaJ-QdK-PA_Rg-bx90onXgHUcwZpg18k=w240-h480-rw").show(2000)
+        .animate({
+          rotate: "+=75deg"
+        },1500)
+      })
       
     </script>
   </body>
